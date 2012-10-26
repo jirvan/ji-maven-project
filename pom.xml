@@ -6,7 +6,7 @@
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>    
+    </properties>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -26,7 +26,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
-                  <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
             <plugin>
@@ -37,11 +37,14 @@
                     <execution>
                         <id>enforce</id>
                         <configuration>
-                            <rules> 
-                                <DependencyConvergence />
+                            <rules>
+                                <DependencyConvergence/>
+                                <requireReleaseVersion>
+                                    <message>No Snapshots Allowed!</message>
+                                </requireReleaseVersion>
                             </rules>
                         </configuration>
-                        <goals> 
+                        <goals>
                             <goal>enforce</goal>
                         </goals>
                     </execution>
