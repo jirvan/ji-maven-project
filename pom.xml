@@ -42,6 +42,9 @@
                                 <requireReleaseVersion>
                                     <message>No Snapshots Allowed!</message>
                                 </requireReleaseVersion>
+                                <requireReleaseDeps>
+                                    <message>No Snapshots Allowed!</message>
+                                </requireReleaseDeps>
                             </rules>
                         </configuration>
                         <goals>
