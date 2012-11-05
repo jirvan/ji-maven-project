@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jirvan</groupId>
     <artifactId>ji-maven-project</artifactId>
-    <version>1.0.6-SNAPSHOT</version>
+    <version>1.0.6</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +17,7 @@
     </dependencies>
     <scm>
         <developerConnection>scm:git:dummy - should not push</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v1.0.6</tag>
     </scm>
     <build>
         <plugins>
@@ -48,7 +48,7 @@
                         <id>enforce</id>
                         <configuration>
                             <rules>
-                                <DependencyConvergence/>
+                                <DependencyConvergence />
                                 <requireReleaseVersion>
                                     <message>No Snapshots Allowed!</message>
                                 </requireReleaseVersion>
@@ -64,7 +64,7 @@
                 </executions>
                 <configuration>
                     <rules>
-                        <DependencyConvergence/>
+                        <DependencyConvergence />
                         <requireReleaseDeps>
                             <message>No Snapshots Allowed!</message>
                         </requireReleaseDeps>
