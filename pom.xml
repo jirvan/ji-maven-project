@@ -46,6 +46,17 @@
                 <executions>
                     <execution>
                         <id>enforce</id>
+                        <configuration>
+                            <rules>
+                                <DependencyConvergence/>
+                                <requireReleaseVersion>
+                                    <message>No Snapshots Allowed!</message>
+                                </requireReleaseVersion>
+                                <requireReleaseDeps>
+                                    <message>No Snapshots Allowed!</message>
+                                </requireReleaseDeps>
+                            </rules>
+                        </configuration>
                         <goals>
                             <goal>enforce</goal>
                         </goals>
@@ -53,10 +64,7 @@
                 </executions>
                 <configuration>
                     <rules>
-                        <DependencyConvergence />
-                        <requireReleaseVersion>
-                            <message>No Snapshots Allowed!</message>
-                        </requireReleaseVersion>
+                        <DependencyConvergence/>
                         <requireReleaseDeps>
                             <message>No Snapshots Allowed!</message>
                         </requireReleaseDeps>
