@@ -20,6 +20,15 @@
         <tag>HEAD</tag>
     </scm>
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.build.properties</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -48,7 +57,7 @@
                         <id>enforce</id>
                         <configuration>
                             <rules>
-                                <DependencyConvergence />
+                                <DependencyConvergence/>
                                 <requireReleaseVersion>
                                     <message>No Snapshots Allowed!</message>
                                 </requireReleaseVersion>
@@ -64,7 +73,7 @@
                 </executions>
                 <configuration>
                     <rules>
-                        <DependencyConvergence />
+                        <DependencyConvergence/>
                         <requireReleaseDeps>
                             <message>No Snapshots Allowed!</message>
                         </requireReleaseDeps>
