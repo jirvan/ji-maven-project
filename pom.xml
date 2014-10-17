@@ -11,6 +11,9 @@
         <developerConnection>scm:git:dummy - should not push</developerConnection>
         <tag>HEAD</tag>
     </scm>
+    <prerequisites>
+        <maven>3.0.4</maven>
+    </prerequisites>
     <build>
         <plugins>
             <plugin>
@@ -40,7 +43,7 @@
                         <id>enforce</id>
                         <configuration>
                             <rules>
-                                <DependencyConvergence />
+                                <DependencyConvergence/>
                                 <requireReleaseVersion>
                                     <message>No Snapshots Allowed!</message>
                                 </requireReleaseVersion>
@@ -56,7 +59,7 @@
                 </executions>
                 <configuration>
                     <rules>
-                        <DependencyConvergence />
+                        <DependencyConvergence/>
                         <requireReleaseDeps>
                             <message>No Snapshots Allowed!</message>
                         </requireReleaseDeps>
